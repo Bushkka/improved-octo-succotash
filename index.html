@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#121c36">
+<title>Getting to Know Greek Orthodoxy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#121c36;--navy2:#1c2a4d;--ivory:#f8f3e6;--parch:#ede2c6;--gold:#9a7b3c;--goldl:#d2b46e;--wine:#6b1d2e;--ink:#1d2236;--mute:#555a6b;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:56px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 17px/1.65 "Hanken Grotesk",-apple-system,"Helvetica Neue",Arial,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,8vw,2.8rem);color:var(--navy)}
+h3{font-size:1.4rem;color:var(--navy)}
+p{margin:0 0 1em}
+.wrap{max-width:640px;margin:0 auto;padding:0 22px}
+section{padding:72px 0 8px}
+.lede{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-size:1.35rem;line-height:1.45;color:var(--navy);margin:14px 0 26px}
+.rule{width:44px;height:2px;background:var(--gold);margin:0 0 20px;border:0}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:2px}
+.navy :focus-visible,nav :focus-visible,.hero :focus-visible{outline-color:var(--goldl)}
+nav{position:sticky;top:0;z-index:20;background:rgba(18,28,54,.97);padding-top:env(safe-area-inset-top,0px);overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{display:inline-block;color:var(--parch);text-decoration:none;font-size:.92rem;padding:15px 13px;opacity:.75;border-bottom:2px solid transparent}
+nav a:hover{opacity:1;color:var(--goldl)}
+nav a.on{opacity:1;color:var(--goldl);border-bottom-color:var(--goldl)}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--goldl);transform-origin:left;transform:scaleX(0);z-index:30}
+.hero{background:var(--navy);color:var(--ivory);padding:56px 0 0;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(2.5rem,11.5vw,4.2rem);color:var(--ivory)}
+.hero p.sub{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-size:1.45rem;line-height:1.4;color:var(--parch);margin:18px 0 0;max-width:28ch}
+.hero .note{font-size:1rem;color:#d3cdb9;margin:22px 0 0;max-width:46ch}
+.skyline{display:block;width:100%;height:auto;margin-top:34px}
+.skyline .dome,.skyline .cross{opacity:0;animation:rise 1.6s .2s ease forwards}
+.skyline .cross{animation-delay:.9s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.band{background:var(--parch);padding:64px 0;margin-top:72px}
+.band section{padding:0}
+.band.navy{background:var(--navy);color:var(--ivory)}
+.band.navy h2,.band.navy h3{color:var(--ivory)}
+.band.navy .lede{color:var(--parch)}
+details{border-top:1px solid rgba(154,123,60,.55)}
+details:last-of-type{border-bottom:1px solid rgba(154,123,60,.55)}
+summary{list-style:none;cursor:pointer;padding:16px 34px 16px 0;position:relative;font-weight:600;min-height:48px;-webkit-tap-highlight-color:transparent}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:1.5rem;font-weight:400;color:var(--gold);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+summary small{display:block;font-weight:400;color:var(--mute);font-size:.92rem}
+details .body{padding:0 0 18px;animation:open .3s ease}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.yr{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-size:1.5rem;color:var(--gold);font-weight:600;margin-right:10px}
+.tl summary{display:flex;align-items:baseline}
+.three{display:grid;gap:12px;margin:22px 0}
+.three div{background:#fff9;border-left:3px solid var(--gold);padding:12px 16px;font-size:.98rem}
+.three b{display:block;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-size:1.25rem;color:var(--navy)}
+.pull{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-style:italic;font-size:1.55rem;line-height:1.3;color:var(--goldl);border-left:2px solid var(--goldl);padding-left:18px;margin:26px 0}
+.fine{font-size:.92rem;color:var(--mute);border-left:2px solid var(--gold);padding-left:14px}
+.band.navy .fine{color:#c4bfae}
+/* theosis */
+.forge{background:var(--navy2);border:1px solid rgba(210,180,110,.4);border-radius:6px;margin:22px 0 10px;height:150px;position:relative;overflow:hidden}
+.forge svg{position:absolute;inset:0;width:100%;height:100%}
+#iron{fill:#6b6f7c;transition:fill 1.6s ease}
+#glow{opacity:0;transition:opacity 1.6s ease}
+#flame{opacity:0;transform:scale(.6);transform-origin:300px 128px;transition:opacity 1s ease,transform 1s ease}
+.hot #iron{fill:#f0942f}
+.hot #glow{opacity:1}
+.hot #flame{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){.hot #flame path{animation:fl 1.5s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:50% 100%}}
+@keyframes fl{to{transform:scale(.95,1.07)}}
+#fireCap{font-style:italic;min-height:3.3em;color:var(--parch);margin:6px 0 16px}
+button{font:600 1rem "Hanken Grotesk",sans-serif;background:var(--wine);color:#fff;border:0;border-radius:3px;padding:13px 20px;min-height:48px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:active{filter:brightness(.9)}
+button.ghost{background:transparent;color:var(--goldl);border:1.5px solid var(--goldl)}
+/* tabs-free list for life; questions */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}
+.chips button{background:transparent;color:var(--ink);border:1.5px solid var(--gold);border-radius:999px;font-weight:500;font-size:.98rem;padding:8px 16px;min-height:44px}
+.chips button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--ivory)}
+.qcard{background:var(--navy);color:var(--ivory);padding:34px 24px;margin:20px 0 16px;min-height:190px;display:flex;align-items:center;border-top:3px solid var(--gold)}
+.qcard p{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-size:1.75rem;line-height:1.25;margin:0}
+.qcard p.pop{animation:open .35s ease}
+.sources{padding:56px 0 64px;font-size:.92rem;color:var(--mute)}
+.sources h3{font-size:1.2rem;margin-bottom:10px}
+.sources ul{padding-left:18px;margin:0}
+.end{background:var(--navy);color:var(--ivory);padding:80px 0 88px;margin-top:72px}
+.end .lede{color:var(--parch)}
+.end .last{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-size:clamp(1.8rem,8vw,2.5rem);line-height:1.2;color:var(--goldl);font-weight:600;margin:34px 0 0}
+footer{background:var(--navy);color:var(--parch);text-align:center;padding:0 22px 34px;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.2rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.skyline .dome,.skyline .cross{opacity:1}}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<nav aria-label="Sections">
+<a href="#basics">Basics</a><a href="#history">History</a><a href="#beliefs">Beliefs</a><a href="#theosis">Theosis</a><a href="#life">Everyday life</a><a href="#ask">Questions</a><a href="#still">Still learning</a>
+</nav>
+
+<header class="hero">
+<div class="wrap">
+<h1>I was going to make a PowerPoint.</h1>
+<p class="sub">Then I remembered this is a first date, not a quarterly performance review.</p>
+<p class="note">So instead: I wanted to learn a little about Greek Orthodoxy before asking you about it, because it’s part of your world and that seemed worth some homework. This is a three-minute tour by someone who’s curious and not remotely an expert. Please correct me anywhere I’ve got it wrong.</p>
+</div>
+<svg class="skyline" viewBox="0 0 400 130" role="img" aria-label="Silhouette of a Byzantine church with a central dome and cross" preserveAspectRatio="xMidYMax slice">
+<g fill="#1c2a4d"><rect x="0" y="108" width="400" height="22"/>
+<g class="dome"><path d="M130 108V84h140v24z"/><path d="M150 84a50 50 0 0 1 100 0z" fill="#26376a"/><rect x="190" y="30" width="20" height="14" fill="#26376a"/><path d="M190 30a10 10 0 0 1 20 0z" fill="#26376a"/>
+<path d="M92 108V92a18 18 0 0 1 36 0v16zM272 108V92a18 18 0 0 1 36 0v16z" fill="#223259"/></g></g>
+<g class="cross" stroke="#d2b46e" stroke-width="2.2" stroke-linecap="round"><path d="M200 8v20M193 14h14M195 22h10"/></g>
+<g fill="#d2b46e" opacity=".85"><rect x="112" y="96" width="3" height="7"/><rect x="190" y="94" width="3" height="9"/><rect x="214" y="94" width="3" height="9"/><rect x="286" y="96" width="3" height="7"/></g>
+</svg>
+</header>
+
+<main>
+<section id="basics"><div class="wrap">
+<h2>The basics</h2><hr class="rule">
+<p class="lede">Eastern Orthodoxy is one of the oldest branches of Christianity, and Greek Orthodoxy is one of its best-known expressions.</p>
+<p>It’s a communion of self-governing churches that share the same faith and worship, often named for the place they serve: Greek, Russian, Serbian, Romanian, Antiochian and others. The Ecumenical Patriarch of Constantinople holds a place of honor among them as “first among equals,” rather than as a pope-like ruler.</p>
+<div class="three">
+<div><b>Eastern Orthodoxy</b>The shared faith: the Trinity, the Incarnation, the sacraments, the early Councils.</div>
+<div><b>Greek Orthodox</b>The Greek-speaking branch, with its own language, hymns and customs. In the U.S., the Greek Orthodox Archdiocese of America is under the Ecumenical Patriarchate.</div>
+<div><b>Greek identity</b>Culture and faith are deeply interwoven, but not interchangeable. Plenty of Greeks aren’t religious, and plenty of Orthodox Christians aren’t Greek.</div>
+</div>
+<p>Greek matters because the New Testament was written in Greek, and many early theologians wrote in it. Much of the Church’s vocabulary comes straight from there, including <em>Eucharist</em> (“thanksgiving”) and <em>Orthodoxia</em>, often explained as “right glory” or “right belief.”</p>
+</div></section>
+
+<div class="band" id="history"><section><div class="wrap">
+<h2>A little history</h2><hr class="rule">
+<p class="lede">Apparently, this tradition has been around a little longer than most of my hobbies. Tap each moment to open it.</p>
+<div class="tl">
+<details name="tl"><summary><span class="yr">1st c.</span>Christianity begins in a Greek-speaking world</summary><div class="body">Paul’s letters to Corinth, Thessalonica and Philippi went to Greek-speaking communities, and the Gospels and letters were written in Greek. The faith spread along Mediterranean trade routes.</div></details>
+<details name="tl"><summary><span class="yr">325–787</span>The seven Ecumenical Councils</summary><div class="body">Bishops gathered to settle big questions, such as who Christ is. Orthodoxy recognizes the first seven. Nicaea (325) and Constantinople (381) gave us the Nicene Creed, still recited in Orthodox worship, and the seventh, Nicaea II in 787, affirmed the veneration of icons.</div></details>
+<details name="tl"><summary><span class="yr">330</span>Constantinople and the Byzantine Empire</summary><div class="body">Constantine dedicated his new capital in 330. For roughly a thousand years it was the center of a Greek-speaking Christian empire. The great church of Hagia Sophia was completed under Justinian in 537.</div></details>
+<details name="tl"><summary><span class="yr">1054</span>The Great Schism</summary><div class="body">In 1054 a papal legate and the Patriarch of Constantinople excommunicated each other. Historians stress that this symbolizes a slow drift rather than one clean break. Disputes over papal authority, the wording of the Creed, language and politics built up over centuries, and the 1204 sack of Constantinople in the Fourth Crusade deepened the wound. In 1965 the mutual excommunications of 1054 were lifted.</div></details>
+<details name="tl"><summary><span class="yr">1453</span>The Ottoman period</summary><div class="body">Constantinople fell in 1453. Under Ottoman rule, the Orthodox Church continued and, for many communities, became an important keeper of language, education and identity. Experiences varied a great deal by place and era. Greece’s War of Independence began in 1821, and the Church of Greece was declared self-governing in 1833.</div></details>
+<details name="tl"><summary><span class="yr">Today</span>A worldwide community</summary><div class="body">Waves of Greek emigration built parishes across North America, Australia and beyond. Many serve as both a church and a cultural home.</div></details>
+</div>
+</div></section></div>
+
+<section id="beliefs"><div class="wrap">
+<h2>What matters most</h2><hr class="rule">
+<p class="lede">Core beliefs in plain language. Orthodoxy isn’t a variation on Catholicism or Protestantism, so even familiar words can mean different things.</p>
+<details><summary>The Holy Trinity<small>One God in three persons</small></summary><div class="body">Father, Son and Holy Spirit: one God, three distinct persons who are equal and eternally in relationship. In Orthodox thought, God is fundamentally communion and love, not a solitary power.</div></details>
+<details><summary>Jesus Christ and salvation<small>God entering the world</small></summary><div class="body">The Son of God became fully human while remaining fully God, joining God and humanity in one person. His death and Resurrection are the heart of Orthodox faith and worship; every Sunday is, in a sense, a small Pascha. Salvation is often described as healing and restored communion with God, a lifelong journey rather than a single moment.</div></details>
+<details><summary>Scripture and Holy Tradition<small>Not one or the other</small></summary><div class="body">Scripture sits within Holy Tradition, meaning the Church’s lived life: the Councils, the writings of the Fathers, worship and the sacraments. The Bible is read in the Church’s own context rather than alone.</div></details>
+<details><summary>Saints and icons<small>Windows, not idols</small></summary><div class="body">Saints are people seen as living close to God, and Orthodox Christians ask for their prayers as one might ask a friend. That honor, called veneration, is different from worship, which belongs to God alone. Icons aren’t just religious art. Because God became visible in Christ, an icon is understood as a window onto the holy and a way of praying with the eyes. They’re painted according to long tradition, which is why they look so timeless.</div></details>
+<details><summary>The Divine Liturgy and Eucharist<small>The center of worship</small></summary><div class="body">The Divine Liturgy, most often that of St. John Chrysostom, is the main service. The bread and wine are understood to become the Body and Blood of Christ, and Communion is received by the faithful. How that happens is generally called a mystery rather than explained.</div></details>
+</div></section>
+
+<div class="band navy" id="theosis"><section><div class="wrap">
+<h2>A beautiful idea: theosis</h2><hr class="rule">
+<p class="lede">If I had to pick the idea that surprised me most, it’s this one.</p>
+<p><b>Theosis</b> means union with God, sometimes called deification. The idea is that God became human so that humans could share in God’s life. Early Church Fathers such as Athanasius taught this, and Orthodox writers often point to 2 Peter 1:4, “partakers of the divine nature.” It isn’t a one-time event but a lifelong growth in love, humility and prayer.</p>
+<div class="pull">Not becoming God by nature, but sharing in God’s life by grace.</div>
+<p>Orthodox theology makes that distinction carefully: a person never becomes God in essence, but can truly share in God’s life. A classic image: iron placed in a fire glows with the fire’s light and heat, yet remains iron. Try it:</p>
+<div class="forge" id="forge">
+<svg viewBox="0 0 400 150" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="g"><stop offset="0" stop-color="#ffb347" stop-opacity=".85"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient></defs>
+<ellipse id="glow" cx="215" cy="75" rx="150" ry="60" fill="url(#g)"/>
+<rect id="iron" x="30" y="66" width="250" height="18" rx="9"/>
+<g id="flame"><path d="M300 128c-22-12-30-30-14-58 4 14 12 14 16 2 12 22 36 34 28 56-6 12-20 12-30 0z" fill="#e0662a"/><path d="M302 126c-10-6-12-16-4-30 2 8 7 8 9 0 7 12 16 18 11 30-3 6-12 6-16 0z" fill="#ffc15a"/></g>
+<rect x="20" y="128" width="360" height="6" fill="#26376a"/>
+</svg>
+</div>
+<p id="fireCap" aria-live="polite">Cold iron. Just iron.</p>
+<button class="ghost" id="heat" type="button" aria-pressed="false">Put the iron in the fire</button>
+<p class="fine" style="margin-top:22px">Still iron, but transformed. Worth saying again: I’m reading this as a curious outsider.</p>
+</div></section></div>
+
+<section id="life" style="padding-top:72px"><div class="wrap">
+<h2>Faith in everyday life</h2><hr class="rule">
+<p class="lede">Observance varies a lot between people and families. Not every Greek person is religious, and not every Orthodox Christian does everything below. This is just the general picture.</p>
+<details><summary>Divine Liturgy and worship<small>Chanting, incense, candles, icons</small></summary><div class="body">Services engage every sense: chanted hymns, traditionally without instruments, incense, candlelight and walls of icons. Worshippers commonly light a candle and make the sign of the cross on entering.</div></details>
+<details><summary>Pascha<small>Orthodox Easter</small></summary><div class="body">The biggest celebration of the year. At a midnight service the church goes dark, then candlelight spreads through the crowd as the greeting rings out: “Christ is risen!” “Truly He is risen!” (<i>Christos Anesti! Alithos Anesti!</i>). Red-dyed eggs are often cracked against each other afterward. Pascha frequently falls on a different date from Western Easter, because of a different method of calculation.</div></details>
+<details><summary>Great Lent and fasting<small>Preparation, not punishment</small></summary><div class="body">The forty days before Holy Week are a time of prayer and simpler eating, traditionally without meat and dairy. How strictly people keep it varies widely by family and person.</div></details>
+<details><summary>Prayer and icons at home<small>A small corner of the house</small></summary><div class="body">Many homes keep an icon corner with a candle or oil lamp, a place for daily prayer. Some people make the sign of the cross, right shoulder to left, at meaningful moments.</div></details>
+<details><summary>Family, parish and community<small>Often one and the same</small></summary><div class="body">Many parishes host festivals, language classes, dance groups and coffee hour. Baptisms, name days (celebrating the saint you’re named for) and holidays often bring extended families together.</div></details>
+<details><summary>Greek hospitality<small>Philoxenia</small></summary><div class="body"><i>Philoxenia</i>, literally “love of the stranger,” is the Greek ideal of welcoming guests. I’m told it involves a lot of food, and that I should arrive hungry. Noted.</div></details>
+</div></section>
+
+<div class="band" id="ask"><section><div class="wrap">
+<h2>Things I’d like to ask you</h2><hr class="rule">
+<p class="lede">Not an interview, just a few things I’m curious about. Choose how deep you’d like to go, draw one, and skip any you like.</p>
+<div class="chips" role="group" aria-label="Question depth">
+<button type="button" data-k="easy" aria-pressed="true">Easy start</button>
+<button type="button" data-k="deep" aria-pressed="false">A little deeper</button>
+<button type="button" data-k="own" aria-pressed="false">The real stuff</button>
+</div>
+<div class="qcard" aria-live="polite"><p id="q">Pick a depth, then draw a question.</p></div>
+<button type="button" id="draw">Draw a question</button>
+</div></section></div>
+
+<div class="end" id="still"><div class="wrap">
+<h2 style="color:var(--ivory)">Still learning</h2><hr class="rule">
+<p class="lede">I’ve learned a little about the history, the traditions, and some of the beliefs. But reading about a faith and understanding what it means to someone personally are two very different things.</p>
+<p class="last">So, that’s my introduction. I’d like to hear yours.</p>
+</div></div>
+
+</main>
+<footer>Thanks for reading.</footer>
+
+<script>
+(function(){
+var bar=document.getElementById("bar");
+function prog(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.transform="scaleX("+(m>0?Math.min(1,h.scrollTop/m):0)+")"}
+addEventListener("scroll",prog,{passive:true});addEventListener("resize",prog);prog();
+
+var links=[].slice.call(document.querySelectorAll("nav a"));
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){links.forEach(function(a){var on=a.getAttribute("href")==="#"+e.target.id;a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current");
+      if(on&&a.scrollIntoView){var n=a.parentNode;n.scrollTo?n.scrollTo({left:a.offsetLeft-20,behavior:"auto"}):0}})}
+  })},{rootMargin:"-40% 0px -55% 0px"});
+  links.forEach(function(a){var t=document.querySelector(a.getAttribute("href"));if(t)io.observe(t)});
+}
+
+var tl=[].slice.call(document.querySelectorAll(".tl details"));
+tl.forEach(function(d){d.addEventListener("toggle",function(){if(d.open)tl.forEach(function(o){if(o!==d)o.open=false})})});
+
+var hot=false,b=document.getElementById("heat"),f=document.getElementById("forge"),cap=document.getElementById("fireCap");
+b.addEventListener("click",function(){
+  hot=!hot;f.classList.toggle("hot",hot);b.setAttribute("aria-pressed",hot);
+  b.textContent=hot?"Take it out":"Put the iron in the fire";
+  cap.textContent=hot?"Glowing with the fire’s light and heat, and still iron.":"Cold iron. Just iron.";
+});
+
+var Q={
+ easy:["Are there any traditions you look forward to every year?","Is there a food that tells you a holiday has really arrived?","If you grew up around church or festivals, what were they like?","Is there a tradition, holiday, or experience you’d recommend I learn more about?","Which part of this did I get wrong? Be gentle."],
+ deep:["Is there a part of the faith that has become more meaningful to you as you’ve gotten older?","What’s something people commonly misunderstand about Greek Orthodoxy?","What comes to mind when you think of Pascha?","How does faith show up in your everyday life, if it does?"],
+ own:["What does your faith mean to you personally?","Was there a moment when it felt especially real to you?","What would you most like to carry forward from the way you were raised?","Is there a part you hold close, and a part you’re still figuring out?"]
+};
+var kind="easy",deck={},last="",q=document.getElementById("q"),chips=[].slice.call(document.querySelectorAll(".chips button"));
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+chips.forEach(function(c){c.addEventListener("click",function(){kind=c.dataset.k;chips.forEach(function(x){x.setAttribute("aria-pressed",x===c)})})});
+document.getElementById("draw").addEventListener("click",function(){
+  if(!deck[kind]||!deck[kind].length){var d=shuf(Q[kind]);if(d[d.length-1]===last&&d.length>1)d.unshift(d.pop());deck[kind]=d}
+  last=deck[kind].pop();q.textContent=last;q.classList.remove("pop");void q.offsetWidth;q.classList.add("pop");
+});
+})();
+</script>
+</body>
+</html>
